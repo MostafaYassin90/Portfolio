@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* 
+@theme {
+  --background-image-bgprimary: linear-gradient(267deg,#DA7C25 0.36%,#B923E1 102.06%);
+} */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Outfit", sans-serif;
+}
+
+.bg-color {
+  background-image: linear-gradient(267deg,#DA7C25 .36%,#B923E1 102.06%);
+}
+.bg-color-about {
+  background-image: linear-gradient(180deg,#13141b 36%,#13141b 100%);
+}
+.text-color {
+  background: linear-gradient(90deg, #DF8908 10%, #B415FF 100%);
+  -webkit-background-clip: text !important;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent ;
+}
+
