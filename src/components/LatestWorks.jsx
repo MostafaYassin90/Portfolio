@@ -8,7 +8,7 @@ const LatestWorks = () => {
   const navigate = useNavigate();
 
   return (
-    <div className='py-20 px-[3vw] sm:px-[4vw] md:px-[5vw] lg:px-[7vw]'>
+    <div id='projects' className='py-20 px-[3vw] sm:px-[4vw] md:px-[5vw] lg:px-[7vw]'>
 
       <Title title={"My latest work"} />
 
@@ -16,7 +16,7 @@ const LatestWorks = () => {
         {
           ProjectsData.slice(0, 6).map((project) => (
             <div key={project.id}>
-              <ProjectCard project={project} delay={project.delay}/>
+              <ProjectCard project={project} delay={project.delay} />
             </div>
           ))
         }
@@ -24,7 +24,7 @@ const LatestWorks = () => {
 
       {/* Show More */}
       <div className='flex justify-center mt-12'>
-        <button onClick={() => { navigate("/projects"), scrollTo(0,0) }} className='text-black dark:text-white text-xl flex items-center gap-2 border border-black dark:border-white py-3 px-10 rounded-full cursor-pointer transition-all duration-300 hover:bg-gray-400 dark:hover:bg-gray-900 group'>
+        <button onClick={() => { navigate("/projects"), scrollTo(0, 0) }} className='text-black dark:text-white text-xl flex items-center gap-2 border border-black dark:border-white py-3 px-10 rounded-full cursor-pointer transition-all duration-300 hover:bg-gray-400 dark:hover:bg-gray-900 group'>
           <span>Show More</span>
           <span className='mt-1 transition-all duration-300 group-hover:translate-x-1.5'><FaArrowRightLong /></span>
         </button>

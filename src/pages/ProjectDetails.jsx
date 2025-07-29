@@ -25,13 +25,13 @@ const ProjectDetails = () => {
     <div className="min-h-screen py-15 px-[3vw] sm:px-[4vw] md:px-[5vw] lg:px-[7vw]">
       <div className="w-full xl:w-[1200px] mx-auto">
 
-        {/* Back Button */}
+        {/* Back Button and picture */}
         <motion.div initial={{ y: 250, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 0.5 }}
         >
           <BackButton />
           {/* Image */}
           <div className="relative cursor-pointer group w-full h-auto rounded-md overflow-hidden border-4 mb-5 border-[#070606] dark:border-gray-400">
-            <img src={project.image} alt="project-image h-full h-full bg-center object-cover" />
+            <img src={project.image} alt="project-image" className="h-full bg-center object-cover" />
             <div className="absolute w-full h-0 bottom-0 overflow-hidden transition-all duration-500 group-hover:h-full left-0 bg-black/50 flex items-center justify-center">
               <div className="flex items-center gap-10">
                 <a href={project.github_url} target="_blank" className="inline-block text-[#111] dark:text-gray-100 border border-gray-[#111] dark:border-gray-400 rounded-full py-2 px-5 cursor-pointer transition-all duration-300 hover:bg-gray-200 dark:hover:bg-gray-900 bg-gray-100 dark:bg-gray-800">Github Repo</a>
@@ -60,18 +60,31 @@ const ProjectDetails = () => {
                 <h4 className="text-gray-[#111] max-sm:text-[16px] dark:text-gray-100 text-[18px] font-semibold">FrontEnd: </h4>
                 <p className="text-gray-[#111] dark:text-gray-200">{project.tech_stack.frontend}</p>
               </div>
-              <div className="flex items-start gap-2">
-                <h4 className="text-gray-[#111] max-sm:text-[16px] dark:text-gray-100 text-[18px] font-semibold">BackEnd: </h4>
-                <p className="text-gray-[#111] dark:text-gray-200">{project.tech_stack.backend}</p>
-              </div>
-              <div className="flex items-start gap-2">
-                <h4 className="text-gray-[#111] max-sm:text-[16px] dark:text-gray-100 text-[18px] font-semibold">DataBase: </h4>
-                <p className="text-gray-[#111] dark:text-gray-200">{project.tech_stack.database}</p>
-              </div>
-              <div className="flex items-start gap-2">
-                <h4 className="text-gray-[#111] max-sm:text-[16px] dark:text-gray-100 text-[18px] font-semibold">Authentication: </h4>
-                <p className="text-gray-[#111] dark:text-gray-200">{project.tech_stack.authentication}</p>
-              </div>
+
+              {
+                project.tech_stack.backend &&
+                <div className="flex items-start gap-2">
+                  <h4 className="text-gray-[#111] max-sm:text-[16px] dark:text-gray-100 text-[18px] font-semibold">BackEnd: </h4>
+                  <p className="text-gray-[#111] dark:text-gray-200">{project.tech_stack.backend}</p>
+                </div>
+              }
+
+              {
+                project.tech_stack.database &&
+                <div className="flex items-start gap-2">
+                  <h4 className="text-gray-[#111] max-sm:text-[16px] dark:text-gray-100 text-[18px] font-semibold">DataBase: </h4>
+                  <p className="text-gray-[#111] dark:text-gray-200">{project.tech_stack.database}</p>
+                </div>
+              }
+
+              {
+                project.tech_stack.authentication &&
+                <div className="flex items-start gap-2">
+                  <h4 className="text-gray-[#111] max-sm:text-[16px] dark:text-gray-100 text-[18px] font-semibold">Authentication: </h4>
+                  <p className="text-gray-[#111] dark:text-gray-200">{project.tech_stack.authentication}</p>
+                </div>
+              }
+
               <div className="flex items-start gap-2">
                 <h4 className="text-gray-[#111] max-sm:text-[16px] dark:text-gray-100 text-[18px] font-semibold">others: </h4>
                 <p className="text-gray-[#111] dark:text-gray-200">{project.tech_stack.others}</p>
@@ -118,8 +131,8 @@ const ProjectDetails = () => {
 
         </div>
         {/* Details */}
-      </div>
-    </div>
+      </div >
+    </div >
   )
 }
 

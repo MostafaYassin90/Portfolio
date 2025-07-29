@@ -13,7 +13,7 @@ const ProjectCard = ({ project }) => {
       <div
         onClick={() => { navigate(`/projects/project/${project.id}`); scrollTo(0, 0) }}
         className='relative group h-[200px] lg:h-[250px] cursor-pointer group overflow-hidden'>
-        <img src={project.image} className='h-full w-full bg-center rounded-tl-md rounded-tr-md transition-all duration-300 group-hover:scale-105' />
+        <img loading="lazy" src={project.image} className='h-full w-full bg-center rounded-tl-md rounded-tr-md transition-all duration-300 group-hover:scale-105' />
         <div className='absolute text-[#fff] w-full h-0 left-0 bottom-0 flex items-center justify-center bg-black/50 transition-all duration-300 group-hover:h-full'>
           <div className='flex items-center justify-center gap-3 mt-5'>
             <FaArrowLeft />

@@ -10,14 +10,14 @@ import Footer from './components/Footer';
 
 const App = () => {
   return (
-    <div className=' bg-white dark:bg-[#070606]'>
+    <div className=' bg-white dark:bg-[#070606] overflow-hidden'>
       <Toaster />
       <DarkMode />
-      <ScrollToTop/>
+      <ScrollToTop />
       <Navbar />
       <Routes>
         <Route path='/' element={<Home />} />
-        <Route path='/projects' element={<Projects />}/>
+        <Route path='/projects' element={<Projects />} />
         <Route path='/projects/project/:id' element={<ProjectDetails />} />
       </Routes>
       <Footer />

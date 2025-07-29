@@ -41,11 +41,11 @@ const Navbar = () => {
       {/* Links */}
       <div className={`max-sm:hidden`}>
         <ul className="flex items-center gap-4">
-          <li> <a href="/" className="scroll-behavior px-2 text-gray-800 font-medium dark:text-gray-100 transition-all duration-300 hover:text-[#B923E1]">Home</a> </li>
-          <li> <a href="#about" className="scroll-behavior px-2 text-gray-800 font-medium dark:text-gray-100 transition-all duration-300 hover:text-[#B923E1]">About</a> </li>
-          <li> <a href="#skills" className="scroll-behavior px-2 text-gray-800 font-medium dark:text-gray-100 transition-all duration-300 hover:text-[#B923E1]">Skills</a> </li>
-          <li> <a href="#projects" className="scroll-behavior px-2 text-gray-800 font-medium dark:text-gray-100 transition-all duration-300 hover:text-[#B923E1]">Projects</a> </li>
-          <li> <a href="#contact" className="scroll-behavior px-2 text-gray-800 font-medium dark:text-gray-100 transition-all duration-300 hover:text-[#B923E1]">Contact</a> </li>
+          <li> <a rel="preload" href="/" className="scroll-behavior px-2 text-gray-800 font-medium dark:text-gray-100 transition-all duration-300 hover:text-[#B923E1]">Home</a> </li>
+          <li> <a rel="preload" href="#about" className="scroll-behavior px-2 text-gray-800 font-medium dark:text-gray-100 transition-all duration-300 hover:text-[#B923E1]">About</a> </li>
+          <li> <a rel="preload" href="#skills" className="scroll-behavior px-2 text-gray-800 font-medium dark:text-gray-100 transition-all duration-300 hover:text-[#B923E1]">Skills</a> </li>
+          <li> <a rel="preload" href="#projects" className="scroll-behavior px-2 text-gray-800 font-medium dark:text-gray-100 transition-all duration-300 hover:text-[#B923E1]">Projects</a> </li>
+          <li> <a rel="preload" href="#contact" className="scroll-behavior px-2 text-gray-800 font-medium dark:text-gray-100 transition-all duration-300 hover:text-[#B923E1]">Contact</a> </li>
         </ul>
       </div>
 
@@ -66,11 +66,11 @@ const Navbar = () => {
       {/* Responsive Links */}
       <div className={`absolute bg-gray-100 dark:bg-[#070606] border-b border-gray-400 py-3 top-[100%] right-0 overflow-hidden transition-all duration-500 ${showMenu ? "w-full" : "w-0"} sm:w-0`}>
         <ul className="flex flex-col gap-1">
-          <li> <a href="/" className="px-3 py-3 block text-gray-800 font-medium dark:text-gray-100 transition-all duration-300 hover:bg-[#ddd] dark:hover:bg-[#444]">Home</a> </li>
-          <li> <a href="#about" className="px-3 py-3 block text-gray-800 font-medium dark:text-gray-100 transition-all duration-300 hover:bg-[#ddd] dark:hover:bg-[#444]">About</a> </li>
-          <li> <a href="#skills" className="px-3 py-3 block text-gray-800 font-medium dark:text-gray-100 transition-all duration-300 hover:bg-[#ddd] dark:hover:bg-[#444]">Skills</a> </li>
-          <li> <a href="#projects" className="px-3 py-3 block text-gray-800 font-medium dark:text-gray-100 transition-all duration-300 hover:bg-[#ddd] dark:hover:bg-[#444]">Projects</a> </li>
-          <li> <a href="#contact" className="px-3 py-3 block text-gray-800 font-medium dark:text-gray-100 transition-all duration-300 hover:bg-[#ddd] dark:hover:bg-[#444]">Contact</a> </li>
+          <li> <a href="/" onClick={() => { setShowMenu(false) }} className="px-3 py-3 block text-gray-800 font-medium dark:text-gray-100 transition-all duration-300 hover:bg-[#ddd] dark:hover:bg-[#444]">Home</a> </li>
+          <li> <a href="#about" onClick={() => { setShowMenu(false) }} className="px-3 py-3 block text-gray-800 font-medium dark:text-gray-100 transition-all duration-300 hover:bg-[#ddd] dark:hover:bg-[#444]">About</a> </li>
+          <li> <a href="#skills" onClick={() => { setShowMenu(false) }} className="px-3 py-3 block text-gray-800 font-medium dark:text-gray-100 transition-all duration-300 hover:bg-[#ddd] dark:hover:bg-[#444]">Skills</a> </li>
+          <li> <a href="#projects" onClick={() => { setShowMenu(false) }} className="px-3 py-3 block text-gray-800 font-medium dark:text-gray-100 transition-all duration-300 hover:bg-[#ddd] dark:hover:bg-[#444]">Projects</a> </li>
+          <li> <a href="#contact" onClick={() => { setShowMenu(false) }} className="px-3 py-3 block text-gray-800 font-medium dark:text-gray-100 transition-all duration-300 hover:bg-[#ddd] dark:hover:bg-[#444]">Contact</a> </li>
         </ul>
       </div>
 

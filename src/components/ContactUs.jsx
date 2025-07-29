@@ -54,8 +54,8 @@ const ContactUs = () => {
       <div className="flex flex-col md:flex-row items-start gap-10">
 
         {/* text */}
-        <motion.div initial={{x: -100, opacity:0}} whileInView={{x:0, opacity:1}} transition={{duration: 0.5, delay:0.2}}
-        className="w-full md:w-[45%] flex flex-col gap-5">
+        <motion.div initial={{ x: -100, opacity: 0 }} whileInView={{ x: 0, opacity: 1 }} transition={{ duration: 0.5, delay: 0.2 }}
+          className="w-full md:w-[45%] flex flex-col gap-5">
           <h3 className="w-fit text-4xl font-semibold text-color">Let's talk</h3>
           <p className="text-[#111] dark:text-gray-100">I'm currently avaliable to take on new projects, so feel free to send me a message about anything that you want me to work on. You can contact anytime.</p>
           <div className="flex flex-col gap-3">
@@ -78,7 +78,7 @@ const ContactUs = () => {
             {
               connectData.map((link, index) => (
                 <a href={link.path} key={index} className="inline-block w-12 h-12 bg-[#ddd] border-2 border-[#454545] p-2 rounded-full transition-all duration-300 hover:scale-105">
-                  <img src={link.image} alt="social-image" />
+                  <img src={link.image} alt={link.alt} />
                 </a>
               ))
             }
@@ -87,8 +87,8 @@ const ContactUs = () => {
         </motion.div>
 
         {/* Form */}
-        <motion.form initial={{x: 100, opacity:0}} whileInView={{x:0, opacity:1}} transition={{duration: 0.5, delay:0.2}}
-        onSubmit={sendMessageHandler} ref={formEle} className="w-full md:flex-1 flex flex-col gap-6">
+        <motion.form initial={{ x: 100, opacity: 0 }} whileInView={{ x: 0, opacity: 1 }} transition={{ duration: 0.5, delay: 0.2 }}
+          onSubmit={sendMessageHandler} ref={formEle} className="w-full md:flex-1 flex flex-col gap-6">
           {/* Name */}
           <div className="flex flex-col gap-2">
             <label htmlFor="name" className="text-gray-600 font-semibold dark:text-gray-200">Your Name</label>

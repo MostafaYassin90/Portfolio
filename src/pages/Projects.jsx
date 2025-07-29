@@ -5,10 +5,10 @@ import Title from "../components/Title";
 
 const Projects = () => {
   return (
-    <div id="projects" className="min-h-screen py-15 px-[3vw] sm:px-[4vw] md:px-[5vw] lg:px-[7vw]">
-     
-     {/* Title */}
-      <Title title={"My Projects"} align={"mx-start"}/>
+    <div className="min-h-screen py-15 px-[3vw] sm:px-[4vw] md:px-[5vw] lg:px-[7vw]">
+
+      {/* Title */}
+      <Title title={"My Projects"} align={"mx-start"} />
 
       <div className="flex items-center justify-between gap-5 px-1">
         <BackButton />
@@ -22,7 +22,7 @@ const Projects = () => {
         {
           ProjectsData.map((project) => (
             <div key={project.id}>
-              <ProjectCard project={project}/>
+              <ProjectCard project={project} />
             </div>
           ))
         }

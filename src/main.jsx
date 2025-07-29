@@ -6,7 +6,7 @@ import './index.css';
 
 createRoot(document.getElementById('root')).render(
   <BrowserRouter>
-    <MotionConfig viewport={{once: true}}>
+    <MotionConfig viewport={{ once: true }} reducedMotion="user">
       <App />
     </MotionConfig>
   </BrowserRouter>

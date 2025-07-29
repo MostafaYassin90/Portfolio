@@ -1,4 +1,5 @@
 import profile_image from "../assets/profile-image.jpg";
+import profile_picture from "../assets/profile-picture.webp";
 import theme_pattern from "../assets/theme_pattern.svg";
 import html_logo from "../assets/icons8-html5.svg";
 import css_logo from "../assets/icons8-css3.svg";
@@ -32,6 +33,7 @@ import frontend_ecommerce from "../assets/projects-image/frontend-ecommerce.PNG"
 
 export const assets = {
   profile_image: profile_image,
+  profile_picture: profile_picture,
   theme_pattern: theme_pattern,
   html_logo: html_logo
 }
@@ -315,12 +317,12 @@ export const ProjectsData = [
     features: ["Apparel Catalog", "Search & Filter", "Cart Management", "Responsive Layout", "SPA Performance", "API Integration (Mock/Fake API)", "User‑Friendly UI", "Demo Checkout Flow", "Fully Responsive Design"],
     image: frontend_ecommerce,
     tech_stack: {
-      frontend: "React.js, Tailwind CSS, React Router DOM, Axios (for API requests), React Stripe",
+      frontend: "React.js, Tailwind CSS, React Router DOM, Axios (for API requests)",
       backend: "",
       database: "",
       authentication: "",
       hosting: "Vercel",
-      others: "Responsive Design, RESTful APIs"
+      others: "Responsive Design"
     },
     skills: [html_logo, css_logo, tailwind_logo, js_logo, react_logo],
     github_url: "https://github.com/MostafaYassin90/E-Commerce-React-Project",
@@ -339,26 +341,31 @@ export const connectData = [
   {
     title: "GitHub",
     image: github_connect_image,
+    alt: "github image",
     path: "https://github.com/MostafaYassin90"
   },
   {
     title: "LinkedIn",
     image: linkedin_connect_image,
+    alt: "linked image",
     path: "https://www.linkedin.com/in/mostafa-yassin-44983a262"
   },
   {
     title: "Facebook",
     image: facebook_connect_image,
+    alt: "facebook image",
     path: "https://www.facebook.com/mostafayassin0"
   },
   {
     title: "Instagram",
     image: instagram_connect_image,
+    alt: "instagram image",
     path: "https://www.instagram.com/mostafa_.yassin"
   },
   {
     title: "Contact",
     image: email_connect_image,
+    alt: "email image",
     path: "https://mail.google.com/mail/u/0/?fs=1&to=mostafayassin292@gmail.com&tf=cm"
   },
 
